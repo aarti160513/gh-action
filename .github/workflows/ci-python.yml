@@ -1,0 +1,26 @@
+name: test run python code
+on:
+  push:
+    branches:
+      - feat/*
+      - main
+
+jobs:
+  ci-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Pyton script
+        run: |
+          python main.py
