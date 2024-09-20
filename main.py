@@ -8,4 +8,4 @@ array2 = np.array([5, 6, 7, 8])
 result = np.multiply(array1, array2)
 
 # Print the result
-print("Result of element-wise multiplication:", result)
+print("Result of element-wise multiplication of two arrays:", result)
